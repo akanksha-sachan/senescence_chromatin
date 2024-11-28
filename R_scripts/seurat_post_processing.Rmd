@@ -30,7 +30,7 @@ library(MuDataSeurat)
 
 # paths
 proj_path <- "/ix/djishnu/Akanksha/datasets/senescence_fibroblasts"
-dataset_path <- file.path(proj_path, "all_treatments_NIA.Rds")
+dataset_path <- file.path(proj_path, "tam_MEFs_gene_silencing.Rds")
 
 # mtPattern: a regex pattern to match against features to look for mitochondrial DNA; may need to adjust for
 # sample species---"^MT-" works for human samples and "^mt-" for mice

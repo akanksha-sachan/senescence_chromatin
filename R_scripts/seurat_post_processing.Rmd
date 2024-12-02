@@ -30,7 +30,7 @@ library(MuDataSeurat)
 
 # paths
 proj_path <- "/ix/djishnu/Akanksha/datasets/senescence_fibroblasts"
-dataset_path <- file.path(proj_path, "tam_MEFs_gene_silencing.Rds")
+dataset_path <- file.path(proj_path, "/mouse_fibro/MEFs_gene_silencing.Rds")
 
 # mtPattern: a regex pattern to match against features to look for mitochondrial DNA; may need to adjust for
 # sample species---"^MT-" works for human samples and "^mt-" for mice
@@ -45,5 +45,5 @@ print(head(seurat_obj@meta.data))
 ```
 # Convert Rds to Anndata for Tamoxifen treated cell senescence
 ``` {r MuDataSeurat}
-# MuDataSeurat::WriteH5AD(seurat_obj, file.path(proj_path, "tam.h5ad"), assay = "RNA")
+MuDataSeurat::WriteH5AD(seurat_obj, file.path(proj_path, "/mouse_fibro/MEFs_gene_silencing.h5ad"), assay = "RNA")
 ```
